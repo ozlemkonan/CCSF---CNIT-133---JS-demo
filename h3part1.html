@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+        <title>homework 3</title>
+        <link href="style/index.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="description" content="homework3 for CNIT 133 done by Ozlem Konan">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        
+<script>
+
+     $(function() {
+        $( "#draggable" ).draggable();
+        doSth()
+    });
+        
+
+    function doSth() {
+    
+                    var sum = 0;
+                    var multiplication = 1;
+                    var sum1 = 0;
+                    var multiplication1 = 1;
+                    var x = 3;
+        
+    for ( var num = 5; num <= 21; num += 4 )
+
+        { 
+            sum += num;
+            multiplication *= num;
+        }
+        
+    while( x <= 21 ) 
+
+       {
+        multiplication1 *= x;
+        sum1 += x;
+        x = x + 3;
+        }
+        
+        document.getElementById("multi").value = multiplication;
+        document.getElementById("total").value = sum;
+        document.getElementById("multi1").value = multiplication1;
+        document.getElementById("total1").value = sum1;
+       
+}
+        
+      
+</script>   
+
+</head>
+<body class="background-color">    
+    <h1>Homework 3 - Part 1:</h1> 
+
+
+
+
+
+<section class="body">
+        <h3>Part A</h3>
+
+        
+
+
+<form>
+    Multiplication &rarr; 5 * 9 * 13 * 17 * 21 	&#61 <input type="number" id="multi" readonly><br>
+    Sum &rarr;  5 + 9 + 13 + 17 + 21 &#61 <input type="number" id="total" readonly>
+</form>   
+<br>
+<br>
+
+<h3 style="text-align: center;">Part B</h3>
+<form>
+    Multiplication &rarr; 3 * 6 * 9 * 12 * 15 * 18 * 21 &#61<input type="number" id="multi1" readonly><br>
+    Sum &rarr; 3 * 6 * 9 * 12 * 15 * 18 * 21 &#61 <input type="number" id="total1" readonly>
+</form>   
+   
+
+
+<br>
+<br>
+
+<div id="draggable">
+        <p>~Drag This~</p>
+</div>
+     
+
+
+
+
+
+</section>
+
+
+<br>
+<hr>
+<br>
+          
+    <a href="hw3.html" class="button">Homework 3</a> <br><br>
+    <a href="index.html" class="button">Main Page CNIT 133</a> 
+    
+
+
+</body>
+</html>        

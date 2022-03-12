@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+        <title>Extra Credit of 3:</title>
+        <link href="style/index.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="description" content="homework3 for CNIT 133 done by Ozlem Konan">
+	
+
+
+<script>
+			function process(){
+				var size = document.getElementById("inputNumber").value;
+				var square="";
+				var total="";
+				if((size<=10)&&(size>=2)){
+					for(var i = 0; i < size; i++){
+						for(var j = 0; j < size; j++){
+							if(i==0 ||i== size-1 || j==0 || j==size-1 ){
+								square+="* ";
+							}
+							else{
+									square+='&nbsp; &nbsp;';
+
+							}
+							
+
+							//square+="* ";
+							//square+="<br>";
+						}
+						console.log(square);
+						square+="<br>";
+					}
+				} else {
+					square+="<span style='color:red;'>ERROR! Please enter a number between 2-10</span>"
+				}
+				document.getElementById("squareid").innerHTML=square;
+			}
+</script>
+</head>
+
+<body class="background-color"> 
+	<h1>Homework 3 - Extra Credit</h1> 
+
+<section class="body">
+
+  <p>Please enter size of square between 2 and 10 inclusive</p><br>
+  <input type="number" id="inputNumber">
+  <input type="button" value="print square" onclick="process()">
+  <p class="a" id="squareid">
+
+
+</section>
+
+
+</body>
+</html>
+<br>
+<hr>
+<br>
+
+
+<a href="hw3.html" class="button">Homework 3</a> <br><br>
+<a href="hw1.html" class="button">Main Page CNIT 133</a> 
+
+</body>
+</html>

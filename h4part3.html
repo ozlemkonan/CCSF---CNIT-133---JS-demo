@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+    <title>homework 4</title>
+    <link href="style/index.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="description" content="homework2 for CNIT 133 done by Ozlem Konan">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+
+<style>
+    
+    
+    #myForm {margin-right: 250px;
+             margin-left: auto;
+             text-align: right;}
+
+    #Split {margin-left: 300px;
+            color:rgb(231, 2, 182);
+            }
+    #res {margin-left: 150px;
+          color:rgb(231, 2, 182);
+
+            }
+</style>  
+
+<script>
+
+    $(document).ready(function() {
+        jQuery(function($) {
+            $('input[name="phone-number"]').mask('(999) 999-9999');
+        });
+    });
+
+    function parseNumber() {
+
+        if ($("#myForm").valid()) {
+            var phone = $('#phone-number').val();
+
+            var tokens = phone.split('-');
+
+            $('#extension').val(tokens[1]);
+            
+            var areaCode = document.forms["myForm"].elements["phone-number"].value;
+            document.forms["myForm"].elements["areaCode"].value = areaCode.substr(1, 3);
+        } else {
+            return false;
+        }
+        document.getElementById("firstThree").value = phone.substring(6,9)
+    }
+</script>
+
+
+
+
+
+
+</head>
+
+<body onload="document.forms['myForm'].elements['phone-number'].focus();" class="background-color">
+
+    <h1>Homework 4 - Part 3: </h1>
+
+
+
+<section class="body">
+        
+    
+    
+<form name="myForm" id="myForm">
+
+        <p>
+           <label for="phonenumber">Please Enter a Phone Number &rarr; </label>
+             <input name="phone-number" type="text" size="13" id="phone-number">
+         
+          <br><br>
+             <input type="button" id="Split" value="Split" onclick="parseNumber()">
+        </p>
+<br>
+        <p>
+            
+            <label for="areacode">Area Code:&nbsp;</label>
+                 <input name="areaCode" type="text" size="3">
+            
+        </p>
+      
+       <p>
+           <label for="firsttree">First three digits:&nbsp; </label>
+                 <input name="firstThree" type="text" size="3" id="firstThree">
+          
+        </p>
+
+        <p>
+            <label for="lastfour">Last four digits:&nbsp; </label>
+                    <input name="extension" type="text" size="4" id="extension"><br><br>
+                    <input type="reset" id="res" value="Reset"> 
+        </p>
+        
+       
+            
+</form>
+
+</section>
+
+
+
+<br>
+<hr>
+<br>
+              
+        <a href="hw4.html" class="button">Homework 4</a> <br><br>
+        <a href="index.html" class="button">Main Page CNIT 133</a> 
+        
+    
+    
+</body>
+</html>        

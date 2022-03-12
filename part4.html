@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Part 4</title>
+        <link href="style/index.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="description" content="Part4 one of CNIT 133 homework 2 done by Ozlem Konan">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        
+<script>
+ 
+$(document).ready(function() { 
+      
+      var random1, random2, r1, r2, result, 
+      
+      random1 = Math.floor(Math.random() * 9) + 1 ;
+      random2 = Math.floor(Math.random() * 9) + 1 ;
+      
+      r1= parseFloat(random1);
+      r2= parseFloat(random2);
+
+      document.getElementById("num1").value= r1;
+      document.getElementById("num2").value= r2;
+      result = r1 * r2;
+
+      msg=document.getElementById("grade-message");
+      msg.innerHTML="";
+      
+      $("#submit").click(function() {
+        answer= parseInt($('#num3').val());
+      
+      
+      if(answer===result)
+
+      { 
+        document.getElementById("result").value= result, msg.innerHTML="Very Good!"
+      }
+      
+      else
+      {
+        document.getElementById("result").value=result, msg.innerHTML="Please try it again!"
+      }
+      
+      })
+});
+
+</script>
+<script>
+  function reload1() {
+  window.location.reload(1)
+  }
+</script>       
+</head>
+<body class="background-color"> 
+
+    <h1>Homework 2 - Part 4: Multiplication</h1> 
+
+    <p1>What is the answer? Plese enter your result!</p1>
+    <br>
+    <br>
+
+
+<form>
+    <table>
+    <tr>
+    <td><input type="number" size="5" id="num1" autofocus readonly></td>
+    <td>x</td>
+    <td><input type="number" size="5" id="num2" autofocus readonly></td>
+    <td>=</td>
+    <td><input type="number" size="5" id="num3"></td>
+    </tr>
+    </table>
+    <br>
+    <button type="button" id="submit">Submit</button>
+    <input type="reset" value="Next Question" onclick="reload1()">
+
+
+</form>
+<br>
+<div id="grade-message"></div> <br>
+<form class="result">
+    <tr>
+    <td>Result: <input type="text" id="result"></td>
+    </tr>
+
+
+       
+
+</form>
+
+<br>
+<hr>
+<br>
+            
+        <a href="hw2.html" class="button">Homework 2</a> <br><br>
+        <a href="index.html" class="button">Main Page CNIT 133</a> 
+        
+    
+
+
+
+</body>
+</html>

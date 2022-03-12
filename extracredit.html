@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>ExtraCredit</title>
+        <link href="style/index.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="description" content="Extra Credit one of CNIT 133 homework 2 done by Ozlem Konan">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+<script> 
+
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+
+
+$(document).ready(function(){
+   
+        $('#dollar').focus(function() {
+		$(this).css('background-color','yellow');
+	});
+
+  
+      $("#submit").click(function() {
+       
+   
+       var n1, msg,
+   
+       n1 = document.getElementById("dollar").value;
+   
+            a1 = parseInt(n1);
+
+        msg=document.getElementById("grade-message");
+        msg.innerHTML="";    
+   
+   
+            if ( a1<=0)
+                       { msg.innerHTML="The input is invalid. Please put a number greater than 0!"; };
+                      
+            
+
+       document.getElementById("euro").value = (a1 * 0.89).toFixed(2);
+       
+       document.getElementById("canadian").value =(a1 * 1.31).toFixed(2);
+       
+       document.getElementById("British").value =(a1 * 0.81).toFixed(2);
+       
+       document.getElementById("japon").value =(a1 * 108.80).toFixed(2);
+   
+       document.getElementById("peso").value =(a1 * 19.11).toFixed(2);
+   
+            });
+       });
+      
+   function reset()  {location.reload();}
+
+   </script>
+   
+         
+</script>
+
+
+
+
+</head>
+<body class="background-color"> 
+
+
+       <h1>Homework 2 - Extra Credit</h1>
+
+
+
+<div id="flip"><h3>Click to Show / Hide Instructions<h3></div>
+<div id="panel"><p>The foreign exchange rates in July 2019</p>
+                <p>Enter a dollar amount in the table below to see the corresponding foreign exchange values</p></div>
+       
+<br><br>
+<table border="1">
+    <tr> 
+        <th>Currency</th>
+        <th>Rate</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <th style="text-align:left">British Pound</th> 
+        <td style="text-align:right">0.81</td>
+        <td><input type="number" style="text-align:right" id="British" readonly></td>
+   </tr>
+    
+    <tr>
+        <th style="text-align:left">Canadian Dollar</th> 
+        <td style="text-align:right">1.31</td>
+        <td><input type="number" id="canadian" style="text-align:right" readonly></td>
+    </tr>
+
+    <tr>
+        <th style="text-align:left">Euro</th> 
+        <td style="text-align:right">0.89</td>
+        <td><input type="number" style="text-align:right" id="euro" readonly></td>
+    </tr>
+
+
+    <tr>
+        <th style="text-align:left">Japanese Yen</th> 
+        <td style="text-align:right">1083.80</td>
+        <td><input type="number" style="text-align:right" id="japon" readonly></td>
+    </tr>
+
+    <tr>
+        <th style="text-align:left">Mexican Peso</th> 
+        <td style="text-align:right">19.11</td>
+        <td><input type="number" style="text-align:right" id="peso" readonly></td>
+    </tr>
+
+</table>
+
+
+</table>
+<br>
+<div id="grade-message"></div>
+<table>
+    <tyr>
+        <td>Enter Amount of U.S Dollars</td>
+        <td><input type="number" style="text-align: right" id="dollar"></td>
+    </tr>
+
+</table>
+
+
+    <br>
+
+    <button type="button" id="submit">Submit</button>
+    
+    <button type="reset" id="reset" onclick="reset()">Reset</button>
+    
+    
+    <br>
+    <hr>
+    <br>
+
+        <a href="hw2.html" class="button">Homework 2</a> <br><br>
+        <a href="hw1.html" class="button">Main Page CNIT 133</a> 
+        
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+.background-color {
+
+    background-color: #01c0d5;
+    
+}
+
+.header {
+ 
+    height: 150vh;
+    width: 100%;
+    background-image: url(../image/pic2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    
+
+}
+
+.header h1 {
+            color: rgb(255,255,255);
+            float: right;
+            padding-top: 10%;
+            padding-right: 10%;
+            font-size: 30px;
+        
+        
+}
+
+.bullets ul{
+    list-style: none;
+    color: rgb(255,255,255);
+    padding-top: 15%;
+    padding-left: 75%;
+    padding-right: 10%;
+}
+
+
+li {
+    color: rgb(255,255,255);
+    font-size: 20px;
+    list-style: none;;
+}
+
+li:not(:last-child) {
+   
+    margin-bottom: 15px;
+    }
+
+a{
+    
+    color: rgb(92, 2, 85)
+   
+    
+}
+
+
+.button {
+    background-color:rgb(255,255,255);
+    color:rgb(92, 2, 85); 
+    font-weight: bold;
+    cursor: pointer; 
+    padding: 2px 2px;
+    border-radius: 5px;
+}
+   
+.button1 {
+    background-color:rgb(255,255,255);
+    color: black; 
+    font-weight: bold;
+    cursor: pointer; 
+    padding: 2px 2px;
+    border-radius: 5px;
+  
+}
+
+
+.button:hover {
+    background-color:rgb(255,255,255); 
+    color: rgb(92, 2, 85); 
+    }
+
+    #grade-message {color:red}
+
+
+.part3result {font-weight: bold;
+              font-size: larger; }
+
+
+         
+#panel, #flip { padding: 5px;
+                text-align: center;
+                background-color: rgb(142, 243, 247);
+                border: solid 1px grey;
+              }
+              
+#panel { padding: 20px;
+         display: none;
+              }   
+
+.body {
+        width: 600px;
+        margin: 50px auto;
+        padding:10px;
+        background-color: rgb(211, 247, 247);
+                }   
+                
+                
+.body h3   {text-align: center;}  
+
+.body h2 {  text-align: center;
+            color:  rgb(231, 2, 182);}                
+ 
+#draggable { width: 150px;
+             height: 50;
+             background-color:rgb(254, 184, 233); 
+             border: 1px solid rgb(245, 73, 208); 
+             text-align:center; 
+             }
+
+#multi {text-align: right;
+        color: rgb(231, 2, 182);
+        font-weight: bold;
+       }
+
+#multi1 {text-align: right;
+         color: rgb(231, 2, 182);
+         font-weight: bold;}
+
+#total {text-align: right;
+       color: rgb(231, 2, 182);
+       font-weight: bold;}
+
+#total1 {text-align: right;
+         color: rgb(231, 2, 182);
+         font-weight: bold;}
+
+
+#travel   { text-align: center;
+            border-style: solid;
+            border-collapse: collapse;
+            margin-left: 150px;
+            margin-right: 150px;
+            margin-top: auto;
+            margin-bottom: 20px;
+            border-color: navy;
+        
+            }
+
+#travel th {  text-align:center;
+              border-style: solid;
+              border-collapse: collapse;
+              padding: 10px;
+              border-color: navy;
+     
+             }
+
+
+#travel td { text-align:center;
+             border-style: solid;
+             border-collapse: collapse;
+             padding: 2px;
+             border-color: navy;
+
+            
+            }
+    
+
+
+
+.navigation {
+            margin:10px;
+            padding:10px;
+            list-style:none;
+           
+                }
+                
+            
+.navigation li {
+            float:left; 
+            width:150px;
+            line-height: 20px;
+            position:relative;
+            
+                }
+                
+            
+.navigation li a {
+            background: #006570;
+            color:rgb(250, 224, 224);
+            display:block;
+            padding:8px 7px 8px 7px;
+            text-decoration:none; 
+            border-top: 1.5px solid  rgb(248, 161, 229);
+            text-align:center;
+            text-transform:none;
+            border-radius: 10px;
+                }
+.navigation li a:hover { color: rgb(248, 161, 229);}
+                
+                
+            
+.navigation ul {
+            position:absolute;
+            left:0;
+            display:none; 
+            margin:1px 0 0 -2px;
+            padding:0;
+            list-style:none;
+         
+                }
+                
+.navigation ul li {
+            width:150px;
+            float:left;
+            border-top:none;
+                }
+                
+               
+.navigation ul a {
+            display:block; 
+            height:10px;
+            padding:8px 7px 13px 7px;
+            color:#fff;
+            text-decoration:none;
+            border-top:none;
+            border-bottom: 1.5px solid rgb(248, 161, 229);
+                }
+                
+.navigation ul a:hover {
+            color: rgb(248, 161, 229);
+                }      
+
+
+  
+        

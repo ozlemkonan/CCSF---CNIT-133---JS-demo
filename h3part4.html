@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+        <title>homework 3</title>
+        <link href="style/index.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="description" content="homework3 for CNIT 133 done by Ozlem Konan">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<style>
+
+#comment { font-weight: bold;
+            text-align: center;}
+            
+p {text-align: center;
+   font-style: italic;
+   }
+
+#myform { margin-left: 200px;
+          margin-right: 200px;}
+
+#state {  background-color: rgb(245, 207, 235);
+       
+    }
+
+</style>
+
+
+<script>
+                
+function Search(){         
+
+
+        
+               
+        var stateArray = [ ["AL", "ALABAMA", "MONTGOMERY", "4,887,871"],                     
+                           ["AK", "ALASKA", "JUNEAU", "737,438"],  
+                           ["AZ","ARIZONA","PHOENIX","7,171,646"],
+                           ["AR", "ARKANSAS", "LITTLE ROCK", "3,010,825"],
+                           ["CA", "CALIFORNIA", "SACRAMENTO", "39,557,045"],
+                           ["CO", "COLORADO", "DENVER", "5,694,564"]];    
+                
+                
+
+                   
+        var searchKey = document.forms["myform"].elements["state"].value;
+        searchKey = searchKey.toUpperCase();
+                    
+        var found = false;
+        for (var row = 0; row < stateArray.length; row++)
+        {
+                if ((stateArray[row][0] == searchKey) || (stateArray[row][1] == searchKey))
+                     { 
+                       
+                document.forms["myform"].elements["comment"].value = 
+                
+                ("Thanks for your inquiry!\n"+
+
+                "\nState Name = " + stateArray[row][1] + ", " +
+                "\nAbbreviation = " + stateArray[row][0] + ", " +
+                "\nCapital = " + stateArray[row][2] + ", " +
+                "\nPopulation = " + stateArray[row][3]  );
+
+
+                row = stateArray.length;   
+                found = true;
+                    }
+        }
+                
+        if ( found == false ) {document.forms["myform"].elements["comment"].value= "State not found!"; }
+
+
+}
+
+</script>
+
+
+
+
+</head>
+
+
+<body class="background-color"> 
+        <h1>Homework 3 - Part 4:</h1> 
+
+<section class="body">
+
+        <h2>Data About Several of States</h2>
+        <p>Enter one of these <span style="font-style: normal; font-weight: bolder;"> AL, AK, AZ, AR, CA, CO </span>States
+
+<form name="myform" id="myform">       
+        
+        
+        <input type="text" size="15" name="state" id="state" autofocus>
+        <input onclick="Search();" type="button" value="Submit" name="search" id="submit"></p>
+        <input type="reset" value="Reset" onclick="location.reload();">
+<br><br>
+        <textarea rows="8" cols="40" id="comment" readonly></textarea><br><br>
+        
+
+</form>
+        
+</section>
+
+
+<br>
+<hr>
+<br>
+                  
+        <a href="hw3.html" class="button">Homework 3</a> <br><br>
+        <a href="index.html" class="button">Main Page CNIT 133</a> 
+        
+        
+</body>    
+</html>
+                    

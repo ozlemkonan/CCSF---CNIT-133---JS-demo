@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+
+    <title>Homework 5</title>
+    <link href="style/index.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="description" content="homework for CNIT 133 done by Ozlem Konan">
+<style> 
+
+#txtHint {text-align: left; 
+         margin-left:150px; 
+         font-style: italic;}
+
+.info { background-color:rgb(254, 184, 233);
+         padding: 20px;
+        text-align: center;} 
+
+
+
+</style>
+<script>
+    function showHint(str) {
+        if (str.length == 0) { 
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "gethint.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    }
+</script>
+
+
+</head>
+
+
+<body onload="document.getElementById('focus').focus();"  class="background-color"> 
+ 
+    <h1>Homework 5 - Ajax Applications </h1>
+
+<section class="body">
+
+
+
+    
+
+<div class="info">
+
+
+        <p><b>Plsease type a name in the box below:</b></p>
+         
+        First name &rarr; <input type="text" onkeyup="showHint(this.value)" id='focus'>
+
+        <p>Suggestions:<span id="txtHint"></span></p>
+        </form>
+
+</div>
+        
+        <br><br>
+        <h2><a href="https://esapi.intellexer.com/?ref=apilist.fun" target="_blank">Intellexer API</a></h2>
+        <p>Intellexer API offers solutions for all popular and well-known text mining tasks. E.g language detection.
+        Getting started with Intellexer API is simple, all you need to do is:
+        Create an account and grab your free API key from user dashboard or invitation email
+        Read the Intellexer API documentation and choose the method appropriate for your task
+        Execute a GET/POST HTTP request and parse response results.
+        Response formats could be found as JSON and XML.
+        </p>
+
+        
+       
+        
+
+       
+</section>
+
+
+
+
+<br>
+<hr>
+<br>
+          <a href="index.html" class="button">Main Page CNIT 133</a>
+          
+    
+    </body>
+    </html>
+
+
+
+</body>
+</html>
